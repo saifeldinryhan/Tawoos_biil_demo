@@ -1,0 +1,122 @@
+[
+  {
+    "customerCode": "D001",
+    "invoiceCount": 1,
+    "lastDate": "2026/08/26",
+    "items": [
+      {
+        "code": "DEMO-0001",
+        "name": "منتج تجريبي 1",
+        "lastPrice": 35,
+        "mode": "retail",
+        "lastDate": "2026/08/26",
+        "totalQty": 1
+      }
+    ]
+  },
+  {
+    "customerCode": "D002",
+    "invoiceCount": 2,
+    "lastDate": "2026/08/26",
+    "items": [
+      {
+        "code": "DEMO-0002",
+        "name": "منتج تجريبي 2",
+        "lastPrice": 39.25,
+        "mode": "retail",
+        "lastDate": "2026/08/26",
+        "totalQty": 2
+      }
+    ]
+  },
+  {
+    "customerCode": "D003",
+    "invoiceCount": 3,
+    "lastDate": "2026/08/26",
+    "items": [
+      {
+        "code": "DEMO-0003",
+        "name": "منتج تجريبي 3",
+        "lastPrice": 43.5,
+        "mode": "retail",
+        "lastDate": "2026/08/26",
+        "totalQty": 3
+      }
+    ]
+  },
+  {
+    "customerCode": "D004",
+    "invoiceCount": 4,
+    "lastDate": "2026/08/26",
+    "items": [
+      {
+        "code": "DEMO-0004",
+        "name": "منتج تجريبي 4",
+        "lastPrice": 47.75,
+        "mode": "retail",
+        "lastDate": "2026/08/26",
+        "totalQty": 4
+      }
+    ]
+  },
+  {
+    "customerCode": "D005",
+    "invoiceCount": 5,
+    "lastDate": "2026/08/26",
+    "items": [
+      {
+        "code": "DEMO-0005",
+        "name": "منتج تجريبي 5",
+        "lastPrice": 52,
+        "mode": "retail",
+        "lastDate": "2026/08/26",
+        "totalQty": 5
+      }
+    ]
+  },
+  {
+    "customerCode": "D006",
+    "invoiceCount": 6,
+    "lastDate": "2026/08/26",
+    "items": [
+      {
+        "code": "DEMO-0006",
+        "name": "منتج تجريبي 6",
+        "lastPrice": 56.25,
+        "mode": "retail",
+        "lastDate": "2026/08/26",
+        "totalQty": 6
+      }
+    ]
+  },
+  {
+    "customerCode": "D007",
+    "invoiceCount": 7,
+    "lastDate": "2026/08/26",
+    "items": [
+      {
+        "code": "DEMO-0007",
+        "name": "منتج تجريبي 7",
+        "lastPrice": 60.5,
+        "mode": "retail",
+        "lastDate": "2026/08/26",
+        "totalQty": 7
+      }
+    ]
+  },
+  {
+    "customerCode": "D008",
+    "invoiceCount": 8,
+    "lastDate": "2026/08/26",
+    "items": [
+      {
+        "code": "DEMO-0008",
+        "name": "منتج تجريبي 8",
+        "lastPrice": 64.75,
+        "mode": "retail",
+        "lastDate": "2026/08/26",
+        "totalQty": 8
+      }
+    ]
+  }
+]
