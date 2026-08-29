@@ -83,11 +83,71 @@ th,td{border-bottom-width:1.5px}
 
 @media print{.print-table tfoot th:nth-child(3){text-align:center!important}}
 
-.auth-gate{position:fixed;inset:0;z-index:300;background:#f4f7fb;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}.auth-gate.hidden{display:none}.auth-card{width:min(100%,390px);background:#fff;border:1px solid #d8e0ea;border-radius:20px;box-shadow:0 16px 50px #12355b22;padding:30px;display:grid;gap:14px;text-align:right}.auth-card h1{margin:0;color:#12355b;text-align:center}.auth-card p{text-align:center;color:#627083;margin:0 0 6px}.auth-logo{width:92px;height:92px;object-fit:contain;margin:0 auto}.app-content-locked{visibility:hidden}.app-content-locked.app-unlocked{visibility:visible}.user-manager-card{max-height:90vh;overflow:auto}.user-list{display:grid;gap:8px;margin-top:10px}.user-row{display:flex;justify-content:space-between;gap:12px;background:#f4f7fb;border:1px solid #dce5ef;border-radius:10px;padding:9px 12px}.user-row small{color:#627083}
+.auth-gate{position:fixed;inset:0;z-index:300;background:#f4f7fb;display:flex;align-items:center;justify-content:center;padding:24px}.auth-gate.hidden{display:none}.auth-card{width:min(100%,390px);background:#fff;border:1px solid #d8e0ea;border-radius:20px;box-shadow:0 16px 50px #12355b22;padding:30px;display:grid;gap:14px;text-align:right}.auth-card h1{margin:0;color:#12355b;text-align:center}.auth-card p{text-align:center;color:#627083;margin:0 0 6px}.auth-extra-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.auth-extra-actions .btn{min-width:0}.auth-logo{width:92px;height:92px;object-fit:contain;margin:0 auto}.app-content-locked{visibility:hidden}.app-content-locked.app-unlocked{visibility:visible}.user-manager-card{max-height:90vh;overflow:auto}.user-list{display:grid;gap:8px;margin-top:10px}.user-row{display:flex;justify-content:space-between;gap:12px;background:#f4f7fb;border:1px solid #dce5ef;border-radius:10px;padding:9px 12px}.user-row small{color:#627083}
 
 .user-row-actions,.user-data-actions{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.user-row-actions .btn{min-width:auto}.user-row small{display:block;margin-top:3px}.admin-log{display:grid;gap:6px;max-height:220px;overflow:auto;margin-top:8px}.log-row{display:grid;grid-template-columns:auto 1fr;gap:4px 8px;padding:8px 10px;border:1px solid #dce5ef;border-radius:8px;background:#f8fafc;font-size:.86rem}.log-row small{grid-column:1/-1;color:#627083}.price-limit-label{color:#12355b;font-size:.9rem;font-weight:700}
 
-/* Final Arabic alignment and print refinements */
-input,select,textarea{direction:rtl!important;text-align:right!important}#loginUsername,#loginPassword,#modalInput,#newUsername,#newPassword{direction:rtl!important;text-align:right!important}.scan-button{margin-top:6px}.scanner-card{max-width:420px;text-align:center}.scanner-video{display:block;width:100%;max-height:55vh;background:#111;border-radius:12px;object-fit:cover;margin:12px auto}.package-count{margin-right:28px}.print-page-number{display:none!important}
+/* QR scanner modal */
+.scanner-card{width:min(100%,520px);text-align:center}
+.scanner-card h2{margin-top:0}
+.scanner-card p{color:#627083;min-height:1.5em}
+.scanner-video{display:block;width:100%;max-height:55vh;min-height:220px;object-fit:cover;background:#0b1726;border-radius:14px;border:1px solid #d8e0ea;margin:12px 0}
+.scanner-card .modal-actions{justify-content:center;flex-wrap:wrap}
+@media (max-width:560px){.scanner-card{padding:20px}.scanner-video{min-height:180px}}
 
-.auth-gate #loginQrButton{width:min(100%,390px);margin-top:-4px;position:relative;z-index:301}.auth-gate .auth-card{position:relative;z-index:301}#scannerModal{z-index:500!important}
+/* Final modal layering and hidden-state hardening */
+:root{--z-splash:100;--z-modal:5000;--z-lock:700;--z-auth:900;--z-toast:1200}
+.startup-splash{z-index:var(--z-splash)}
+.modal{z-index:var(--z-modal);isolation:isolate}
+.program-lock{z-index:var(--z-lock)}
+.auth-gate{z-index:var(--z-auth)}
+.toast{z-index:var(--z-toast)}
+.modal.hidden,.program-lock.hidden,.auth-gate.hidden,.startup-splash.is-hidden{display:none!important;visibility:hidden!important;pointer-events:none!important}
+.scanner-card{width:min(100%,620px);max-height:92vh;overflow:auto}
+.scanner-video{aspect-ratio:4/3;min-height:220px;max-height:58vh}
+
+/* Product age colors: 267 current, 257 recent, 247 old */
+.product-current{color:var(--navy)!important}
+.product-recent{color:#a15c00!important;background:#fff5d6!important;border-color:#e8bf68!important}
+.product-old{color:#b42318!important;background:#fff0f0!important;border-color:#efaaaa!important}
+.suggestion.product-recent,.suggestion.product-old{font-weight:800}
+.selected-product.product-recent,.selected-product.product-old{font-weight:800}
+.line-qty.product-recent,.line-qty.product-old{font-weight:800}
+
+
+
+
+
+@media print {
+  /* تكثيف كل نصوص الفاتورة */
+  .print-sheet,
+  .print-sheet * {
+    font-weight: 700 !important;
+  }
+
+  /* الحفاظ على وزن أثقل للعناوين والمجاميع */
+  .print-sheet h1,
+  .print-sheet h2,
+  .print-sheet strong,
+  .print-sheet b,
+  .print-sheet th,
+  .print-sheet .print-total,
+  .print-sheet .print-head strong,
+  .print-sheet tfoot th {
+    font-weight: 800 !important;
+  }
+
+  /* يمكن تخفيف الوزن قليلاً للنصوص الصغيرة أو الهوامش */
+  .print-sheet small,
+  .print-sheet .print-terms {
+    font-weight: 600 !important;
+  }
+
+  /* جعل عمود الكمية في صف الجملة في المنتصف */
+  .print-table tfoot th:not([colspan]) {
+  text-align: center !important;
+}
+
+.print-table tfoot .qty-cell {
+  text-align: center !important;
+}

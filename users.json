@@ -10,7 +10,12 @@
       "username": "شيماء عبدالجواد",
       "password": "1122",
       "role": "user"
+    },
+    {
+      "username": "مستخدم تجريبى",
+      "password": "1234",
+      "role": "user"
     }
   ],
-  "updatedAt": "2026-08-26T00:00:00.000Z"
+  "updatedAt": "2026-08-29T00:00:00.000Z"
 }
