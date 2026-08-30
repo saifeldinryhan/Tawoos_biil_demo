@@ -194,3 +194,5 @@ th,td{border-bottom-width:1.5px}
 .print-table tfoot .qty-cell {
   text-align: center !important;
 }
+
+.product-manager-card{max-width:900px}.product-admin-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product-admin-form .modal-error,.product-admin-form .modal-actions{grid-column:1/-1}.manager-search{flex:1;min-width:220px}.product-admin-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid rgba(18,53,91,.12)}.product-admin-row small{display:block;color:#64748b;margin-top:4px}.product-admin-row .user-row-actions{display:flex;gap:6px;flex-shrink:0}@media(max-width:650px){.product-admin-form{grid-template-columns:1fr}.product-admin-row{align-items:flex-start;flex-direction:column}.product-admin-row .user-row-actions{width:100%}}
