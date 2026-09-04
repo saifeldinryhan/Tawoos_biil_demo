@@ -1,21 +1,14 @@
-{
-  "version": 1,
-  "users": [
-    {
-      "username": "Saif_Eldin_Ryhan",
-      "password": "258*357*159*654",
-      "role": "developer"
-    },
-    {
-      "username": "شيماء عبدالجواد",
-      "password": "1122",
-      "role": "user"
-    },
-    {
-      "username": "مستخدم تجريبى",
-      "password": "1234",
-      "role": "user"
-    }
-  ],
-  "updatedAt": "2026-08-29T00:00:00.000Z"
-}
+[
+  {
+    "username": "Saif_Eldin_Ryhan",
+    "password": "258*357*159*654",
+    "role": "developer",
+    "displayName": "المطور"
+  },
+  {
+    "username": "cashier",
+    "password": "cashier123",
+    "role": "cashier",
+    "displayName": "الكاشير"
+  }
+]

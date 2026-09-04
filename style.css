@@ -220,3 +220,13 @@ th,td{border-bottom-width:1.5px}
 .product-detail-row strong{flex:0 0 48%!important;min-width:0!important;color:#123b63!important;font-size:clamp(15px,3.8vw,19px)!important;font-weight:800!important;text-align:right!important;overflow-wrap:anywhere!important}
 .product-detail-row span{flex:1!important;min-width:0!important;color:#1f2937!important;font-size:clamp(15px,3.8vw,19px)!important;font-weight:500!important;text-align:left!important;overflow-wrap:anywhere!important;word-break:break-word!important}
 @media(max-width:650px){.product-detail-row{gap:10px!important;padding:9px 0!important}.product-detail-row strong{flex-basis:50%!important;font-size:16px!important}.product-detail-row span{font-size:16px!important}}
+
+.data-folder-status{display:block;width:100%;color:var(--muted);font-size:11px;text-align:center;margin-top:2px}
+
+/* تنسيق معلومات المنتج: اسم الحقل : القيمة */
+.product-details-card #productDetailsBody{direction:rtl;text-align:right;width:100%;}
+.product-details-card .product-detail-row{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(100px,42%)!important;align-items:center!important;direction:rtl!important;column-gap:20px!important;padding:12px 0!important;min-height:46px!important;line-height:1.6!important;}
+.product-details-card .product-detail-row strong{display:block!important;min-width:0!important;text-align:right!important;white-space:normal!important;overflow-wrap:anywhere!important;}
+.product-details-card .product-detail-row span{display:block!important;min-width:0!important;text-align:left!important;direction:inherit!important;unicode-bidi:plaintext!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important;padding-inline-start:8px!important;}
+.product-details-card .product-detail-row span[dir="ltr"]{direction:ltr!important;text-align:left!important;unicode-bidi:isolate!important;}
+@media(max-width:650px){.product-details-card .product-detail-row{grid-template-columns:minmax(0,1fr) minmax(92px,44%)!important;column-gap:14px!important;padding:11px 0!important}.product-details-card .product-detail-row strong,.product-details-card .product-detail-row span{font-size:16px!important}}
